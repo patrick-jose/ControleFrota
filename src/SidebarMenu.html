@@ -1,0 +1,215 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fleet - Combustivel</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="../Admin/plugins/fontawesome-free/css/all.min.css">
+    
+    <!-- IonIcons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../Admin/dist/css/adminlte.min.css">
+    
+  
+</head>
+<body class="hold-transition sidebar-mini" >
+
+<!-- Sidebar Menu -->
+
+  <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+    <!-- Add icons to the links using the .nav-icon class
+         with font-awesome or any other icon font library -->
+    
+         <li class="nav-item menu-open">
+          <a href="#" class="nav-link active">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+              Dashboard
+            </p>
+          </a>
+        </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">
+          <i class="fa fa-car"></i>
+        <p>
+          Veículos
+          <i class="fas fa-angle-left right"></i>
+        </p>
+      </a>
+      <ul class="nav nav-treeview">
+        <li class="nav-item">
+          <a href="../src/veiculo/lstveiculos.html" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Lista</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../src/motoristas/lstMotoristas.html" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Motoristas</p>
+          </a>
+        </li>                 
+        <li class="nav-item">
+          <a href="../src/veiculo/lstCombustivel.html" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Combustível</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../src/veiculo/lstServicos.html" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Serviços</p>
+          </a>
+        </li>                
+        <li class="nav-item">
+          <a href="../src/veiculo/lstMultas.html" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Multas</p>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">
+          <i class="fa fa-search"></i>
+        <p>
+          Inspeção
+          <i class="fas fa-angle-left right"></i>
+        </p>
+      </a>
+      <ul class="nav nav-treeview">
+        <li class="nav-item">
+          <a href="../src/inspecao/inspection.html" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Histórico</p>
+          </a>
+        </li>
+      </ul>
+      <ul class="nav nav-treeview">
+        <li class="nav-item">
+          <a href="../src/inspecao/inspectionsaddchedules.html" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Agendar</p>
+          </a>
+        </li>
+      </ul>
+    </li>  
+  </ul>
+
+<!-- /.sidebar-menu -->
+
+
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src="../Admin/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../Admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE -->
+<script src="../Admin/dist/js/adminlte.js"></script>
+
+<!-- FLOT CHARTS -->
+<script src="../Admin/plugins/flot/jquery.flot.js"></script>
+<!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+<script src="../Admin/plugins/flot/plugins/jquery.flot.resize.js"></script>
+<!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+<script src="../Admin/plugins/flot/plugins/jquery.flot.pie.js"></script>
+
+
+<!-- OPTIONAL SCRIPTS -->
+<script src="../Admin/plugins/chart.js/Chart.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../Admin/dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="../Admin/dist/js/pages/dashboard3.js"></script>
+<script>
+    $(function () {
+     /*
+      BAR CHART     
+     */
+    /* monta o array com os dados para o bar chart*/
+     var bar_data = {
+      data : [[1,1250.00], [2,2750.00], [3,3458.00], [4,1895.00], [5,3478.00], [6,null]
+             ,[7,null], [8,null], [9,null], [10,null], [11,null], [12,null]],
+      bars: { show: true },
+    }
+
+    /* monta o bar chart com os dados do banco*/
+    $.plot('#bar-chart', [bar_data], {
+      grid  : {
+        borderWidth: 1,
+        borderColor: '#f3f3f3',
+        tickColor  : '#f3f3f3'
+      },
+      series: {
+         bars: {
+          show: true, barWidth: 0.5, align: 'center',
+        },
+      },
+      colors: ['#3c8dbc'],
+      xaxis : {
+        ticks: [[1,'Janeiro'], [2,'Fevereiro'], [3,'Março'], [4,'Abril'], [5,'Maio'], [6,'Juho']
+        , [7,'Julho'], [8,'Agosto'], [9,'Setembro'], [10,'Outubro'], [11,'Novembro'], [12,'Dezembro']],
+        font:[size=5,bold=true]
+      }
+    });
+
+    var bar_tools = {
+      data : [[1,1250.00], [2,2750.00], [3,3458.00], [4,1895.00], [5,3478.00], [6,null]
+             ,[7,null], [8,null], [9,null], [10,null], [11,null], [12,null]],
+      bars: { show: true },
+    }
+
+    $.plot('#bar-tools', [bar_tools], {
+      grid  : {
+        borderWidth: 1,
+        borderColor: '#f3f3f3',
+        tickColor  : '#f3f3f3'
+      },
+      series: {
+         bars: {
+          show: true, barWidth: 0.5, align: 'center',
+        },
+      },
+      colors: ['#3c8dbc'],
+      xaxis : {
+        ticks: [[1,'Janeiro'], [2,'Fevereiro'], [3,'Março'], [4,'Abril'], [5,'Maio'], [6,'Juho']
+        , [7,'Julho'], [8,'Agosto'], [9,'Setembro'], [10,'Outubro'], [11,'Novembro'], [12,'Dezembro']],
+        font:[size=5,bold=true],        
+      }
+    });
+
+    var bar_custom = {
+      data : [[1,1250.00], [2,2750.00], [3,3458.00], [4,1895.00], [5,3478.00], [6,null]
+             ,[7,null], [8,null], [9,null], [10,null], [11,null], [12,null]],
+      bars: { show: true },
+    }
+
+    $.plot('#bar-custom', [bar_custom], {
+      grid  : {
+        borderWidth: 1,
+        borderColor: '#f3f3f3',
+        tickColor  : '#f3f3f3'
+      },
+      series: {
+         bars: {
+          show: true, barWidth: 0.5, align: 'center',
+        },
+      },
+      colors: ['#3c8dbc'],
+      xaxis : {
+        ticks: [[1,'Janeiro'], [2,'Fevereiro'], [3,'Março'], [4,'Abril'], [5,'Maio'], [6,'Juho']
+        , [7,'Julho'], [8,'Agosto'], [9,'Setembro'], [10,'Outubro'], [11,'Novembro'], [12,'Dezembro']],
+        font:[size=5,bold=true],        
+      }
+    });
+
+    })
+</script>
+</body>
+<html>  

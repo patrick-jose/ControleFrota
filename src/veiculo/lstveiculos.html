@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fleet - Veículos</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="../../Admin/plugins/fontawesome-free/css/all.min.css">
+    <!-- IonIcons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../Admin/dist/css/adminlte.min.css">
+  
+
+</head>
+<body class="hold-transition sidebar-mini" >
+
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="index3.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    
+  </nav>
+  <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="#" class="brand-link" style="text-align: center;color: #fff;font-weight: bold;font-size:26px">          
+          <span class="brand-text font-weight-light" >Fleet Manager</span>
+        </a>
+    
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <!-- Sidebar user panel (optional) -->
+          <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          
+            <div class="info">
+              <a href="#" class="d-block">Usuário Teste</a>
+            </div>
+          </div>
+    
+          <!-- Sidebar Menu -->
+          <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+              <!-- Add icons to the links using the .nav-icon class
+                   with font-awesome or any other icon font library -->
+              
+                   <li class="nav-item menu-open">
+                    <a href="../../src/index.html" class="nav-link active">
+                      <i class="nav-icon fas fa-tachometer-alt"></i>
+                      <p>
+                        Dashboard
+                      </p>
+                    </a>
+                  </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fa fa-car"></i>
+                  <p>
+                    Veículos
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="lstveiculos.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Lista</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../../src/motoristas/lstMotoristas.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Motoristas</p>
+                    </a>
+                  </li>                    
+                  <li class="nav-item">
+                    <a href="lstCombustivel.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Combustível</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../veiculo/lstServicos.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Serviços</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="lstMultas.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Multas</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fa fa-car"></i>
+                  <p>
+                    Inspeção
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                      <a href="../../src/inspecao/inspection.html" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Histórico</p>
+                      </a>
+                    </li>
+               </ul>
+               <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="../../src/inspecao/inspectionsaddchedules.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Agendar</p>
+                  </a>
+                </li>
+              </ul>
+              </li>  
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fa fa-car"></i>
+                  <p>
+                    Oficinas
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a> 
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Cadastro</p>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Listagem</p>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Agendamento</p>
+                    </a>
+                  </li>
+                </ul>
+              </li> 
+              <!-- Painel de Postos-->
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fa fa-gas-pump"></i>
+                  <p>
+                    Postos
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a> 
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Cadastro</p>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Listagem</p>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Abastecimentos</p>
+                    </a>
+                  </li>
+                </ul>
+              </li> 
+              <!-- Painel de Seguros-->
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fa fa-hand-holding-medical"></i>
+                  <p>
+                    Seguros
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Cadastro</p>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Listagem</p>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Vigências</p>
+                    </a>
+                  </li>
+                </ul> 
+              </li> 
+              <!-- Painel de Pneus-->
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fa fa-truck-monster"></i>
+                  <p>
+                    Pneus
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a> 
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Fornecedor</p>
+                    </a>
+                  </li>
+                </ul> 
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Marcas</p>
+                    </a>
+                  </li>
+                </ul> 
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Tipos</p>
+                    </a>
+                  </li>
+                </ul> 
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Dimenções</p>
+                    </a>
+                  </li>
+                </ul> 
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Bandas de Rodagem</p>
+                    </a>
+                  </li>
+                </ul> 
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Sucateamento</p>
+                    </a>
+                  </li>
+                </ul> 
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Estoque</p>
+                    </a>
+                  </li>
+                </ul> 
+              </li> 
+              <!-- Painel de Peças-->
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fa fa-screwdriver"></i>
+                  <p>
+                    Peças
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a> 
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Estoque</p>
+                    </a>
+                  </li>
+                </ul> 
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Fornecedores</p>
+                    </a>
+                  </li>
+                </ul> 
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Cadastro</p>
+                    </a>
+                  </li>
+                </ul> 
+              </li> 
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fa fa-screwdriver"></i>
+                  <p>
+                    Manutenção Preventiva
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a> 
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Cadastrar</p>
+                    </a>
+                  </li>
+                </ul> 
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Listar</p>
+                    </a>
+                  </li>
+                </ul> 
+               
+              </li> 
+            </ul>
+          </nav>
+          <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+      </aside>
+
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1 class="m-0">Lista de Veículos</h1>
+              </div><!-- /.col -->
+            </div><!-- /.row -->
+          </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+    
+        <!-- Main content -->
+        <div class="content">
+          <div class="container-fluid">
+            
+            <div class="rows">
+                <div class="row">
+                    <div class="card card-info col-12">
+                        <div class="card-header ">
+                            <i class="fa fa-tools"></i>
+                            &nbsp; Acompanhamento IPVA 2022
+                            <div class="card-tools">
+                              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                <i class="fas fa-minus"></i>
+                              </button>
+                              <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                <i class="fas fa-times"></i>
+                              </button>
+                            </div>
+                        </div>
+                        <div class="card-body table-responsive p-0">
+                          <table class="table table-striped table-valign-middle" style="font-size:12px">
+                            <thead>
+                            <tr>                                  
+                              <th>Veículos</th>
+                              <th>Chassi</th>
+                              <th>Placa</th>                              
+                              <th>Status</th>
+                              <th>Tipo</th>
+                              <th>Grupo</th>
+                              <th>KM Aquisição</th>
+                              <th>Dt Compra</th>
+                              <th>KM Atual</th>
+                              <th>Motorista</th>
+                              <th>Ano</th>
+                              <th>Marca</th>
+                              <th>Modelo</th>
+                              <th>Combustível</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>                                  
+                              <td>Ford F-150 / NFA-3121</td>
+                              <td>
+                                JTDKBRFU9J30593O7
+                              </td>
+                              <td>
+                                6TRJ244
+                              </td>
+                              <td>
+                                <span class="info-box-icon"><i class="fa fa-check-circle" style="color:green"></i></span>
+                                Ativo
+                              </td>
+                              <td>
+                                Pickup Truck
+                              </td>
+                              <td>
+                                Cliente
+                              </td>
+                              <td>
+                                0
+                              </td>
+                              <td>
+                                08/05/2020
+                              </td>
+                              <td>
+                                56491
+                              </td>
+                              <td>
+                                Motorista 1
+                              </td>
+                              <td>
+                                2016
+                              </td>
+                              <td>
+                                Ford
+                              </td>
+                              <td>
+                                F-150
+                              </td>
+                              <td>
+                                Gasolina
+                              </td>
+                            </tr>
+                            <tr>                                  
+                              <td>Toyota Prius</td>
+                              <td>
+                                1FTFW1EG3GFA3I822
+                              </td>
+                              <td>
+                                1CA7895
+                              </td>
+                              <td>
+                                <span class="info-box-icon"><i class="fa fa-check-circle" style="color:green"></i></span>
+                                Ativo
+                              </td>
+                              <td>
+                                Car
+                              </td>
+                              <td>
+                                Diretoria
+                              </td>
+                              <td>
+                                14852
+                              </td>
+                              <td>
+                                08/05/2021
+                              </td>
+                              <td>
+                                85457
+                              </td>
+                              <td>
+                                Diretor 1
+                              </td>
+                              <td>
+                                2018
+                              </td>
+                              <td>
+                                Toyota
+                              </td>
+                              <td>
+                                Prius
+                              </td>
+                              <td>
+                                Gasolina
+                              </td>
+                            </tr>
+                            <tr>                                  
+                              <td>Ford F-150 / NFA-3121</td>
+                              <td>
+                                JTDKBRFU9J30593O7
+                              </td>
+                              <td>
+                                6TRJ244
+                              </td>
+                              <td>
+                                <span class="info-box-icon"><i class="fa fa-check-circle" style="color:green"></i></span>
+                                Ativo
+                              </td>
+                              <td>
+                                Pickup Truck
+                              </td>
+                              <td>
+                                Cliente
+                              </td>
+                              <td>
+                                0
+                              </td>
+                              <td>
+                                08/05/2020
+                              </td>
+                              <td>
+                                56491
+                              </td>
+                              <td>
+                                Motorista 1
+                              </td>
+                              <td>
+                                2016
+                              </td>
+                              <td>
+                                Ford
+                              </td>
+                              <td>
+                                F-150
+                              </td>
+                              <td>
+                                Gasolina
+                              </td>
+                            </tr>
+                            <tr>                                  
+                              <td>Toyota Prius</td>
+                              <td>
+                                1FTFW1EG3GFA3I822
+                              </td>
+                              <td>
+                                1CA7895
+                              </td>
+                              <td>
+                                <span class="info-box-icon"><i class="fa fa-check-circle" style="color:green"></i></span>
+                                Ativo
+                              </td>
+                              <td>
+                                Car
+                              </td>
+                              <td>
+                                Diretoria
+                              </td>
+                              <td>
+                                14852
+                              </td>
+                              <td>
+                                08/05/2021
+                              </td>
+                              <td>
+                                85457
+                              </td>
+                              <td>
+                                Diretor 1
+                              </td>
+                              <td>
+                                2018
+                              </td>
+                              <td>
+                                Toyota
+                              </td>
+                              <td>
+                                Prius
+                              </td>
+                              <td>
+                                Gasolina
+                              </td>
+                            </tr>
+                            <tr>                                  
+                              <td>Ford F-150 / NFA-3121</td>
+                              <td>
+                                JTDKBRFU9J30593O7
+                              </td>
+                              <td>
+                                6TRJ244
+                              </td>
+                              <td>
+                                <span class="info-box-icon"><i class="fa fa-check-circle" style="color:green"></i></span>
+                                Ativo
+                              </td>
+                              <td>
+                                Pickup Truck
+                              </td>
+                              <td>
+                                Cliente
+                              </td>
+                              <td>
+                                0
+                              </td>
+                              <td>
+                                08/05/2020
+                              </td>
+                              <td>
+                                56491
+                              </td>
+                              <td>
+                                Motorista 1
+                              </td>
+                              <td>
+                                2016
+                              </td>
+                              <td>
+                                Ford
+                              </td>
+                              <td>
+                                F-150
+                              </td>
+                              <td>
+                                Gasolina
+                              </td>
+                            </tr>
+                            <tr>                                  
+                              <td>Toyota Prius</td>
+                              <td>
+                                1FTFW1EG3GFA3I822
+                              </td>
+                              <td>
+                                1CA7895
+                              </td>
+                              <td>
+                                <span class="info-box-icon"><i class="fa fa-check-circle" style="color:green"></i></span>
+                                Ativo
+                              </td>
+                              <td>
+                                Car
+                              </td>
+                              <td>
+                                Diretoria
+                              </td>
+                              <td>
+                                14852
+                              </td>
+                              <td>
+                                08/05/2021
+                              </td>
+                              <td>
+                                85457
+                              </td>
+                              <td>
+                                Diretor 1
+                              </td>
+                              <td>
+                                2018
+                              </td>
+                              <td>
+                                Toyota
+                              </td>
+                              <td>
+                                Prius
+                              </td>
+                              <td>
+                                Gasolina
+                              </td>
+                            </tr>
+                            <tr>                                  
+                              <td>Ford F-150 / NFA-3121</td>
+                              <td>
+                                JTDKBRFU9J30593O7
+                              </td>
+                              <td>
+                                6TRJ244
+                              </td>
+                              <td>
+                                <span class="info-box-icon"><i class="fa fa-check-circle" style="color:green"></i></span>
+                                Ativo
+                              </td>
+                              <td>
+                                Pickup Truck
+                              </td>
+                              <td>
+                                Cliente
+                              </td>
+                              <td>
+                                0
+                              </td>
+                              <td>
+                                08/05/2020
+                              </td>
+                              <td>
+                                56491
+                              </td>
+                              <td>
+                                Motorista 1
+                              </td>
+                              <td>
+                                2016
+                              </td>
+                              <td>
+                                Ford
+                              </td>
+                              <td>
+                                F-150
+                              </td>
+                              <td>
+                                Gasolina
+                              </td>
+                            </tr>
+                            <tr>                                  
+                              <td>Toyota Prius</td>
+                              <td>
+                                1FTFW1EG3GFA3I822
+                              </td>
+                              <td>
+                                1CA7895
+                              </td>
+                              <td>
+                                <span class="info-box-icon"><i class="fa fa-check-circle" style="color:green"></i></span>
+                                Ativo
+                              </td>
+                              <td>
+                                Car
+                              </td>
+                              <td>
+                                Diretoria
+                              </td>
+                              <td>
+                                14852
+                              </td>
+                              <td>
+                                08/05/2021
+                              </td>
+                              <td>
+                                85457
+                              </td>
+                              <td>
+                                Diretor 1
+                              </td>
+                              <td>
+                                2018
+                              </td>
+                              <td>
+                                Toyota
+                              </td>
+                              <td>
+                                Prius
+                              </td>
+                              <td>
+                                Gasolina
+                              </td>
+                            </tr>
+                            <tr>                                  
+                              <td>Ford F-150 / NFA-3121</td>
+                              <td>
+                                JTDKBRFU9J30593O7
+                              </td>
+                              <td>
+                                6TRJ244
+                              </td>
+                              <td>
+                                <span class="info-box-icon"><i class="fa fa-check-circle" style="color:green"></i></span>
+                                Ativo
+                              </td>
+                              <td>
+                                Pickup Truck
+                              </td>
+                              <td>
+                                Cliente
+                              </td>
+                              <td>
+                                0
+                              </td>
+                              <td>
+                                08/05/2020
+                              </td>
+                              <td>
+                                56491
+                              </td>
+                              <td>
+                                Motorista 1
+                              </td>
+                              <td>
+                                2016
+                              </td>
+                              <td>
+                                Ford
+                              </td>
+                              <td>
+                                F-150
+                              </td>
+                              <td>
+                                Gasolina
+                              </td>
+                            </tr>
+                            <tr>                                  
+                              <td>Toyota Prius</td>
+                              <td>
+                                1FTFW1EG3GFA3I822
+                              </td>
+                              <td>
+                                1CA7895
+                              </td>
+                              <td>
+                                <span class="info-box-icon"><i class="fa fa-check-circle" style="color:green"></i></span>
+                                Ativo
+                              </td>
+                              <td>
+                                Car
+                              </td>
+                              <td>
+                                Diretoria
+                              </td>
+                              <td>
+                                14852
+                              </td>
+                              <td>
+                                08/05/2021
+                              </td>
+                              <td>
+                                85457
+                              </td>
+                              <td>
+                                Diretor 1
+                              </td>
+                              <td>
+                                2018
+                              </td>
+                              <td>
+                                Toyota
+                              </td>
+                              <td>
+                                Prius
+                              </td>
+                              <td>
+                                Gasolina
+                              </td>
+                            </tr>
+                            <tr>                                  
+                              <td>Ford F-150 / NFA-3121</td>
+                              <td>
+                                JTDKBRFU9J30593O7
+                              </td>
+                              <td>
+                                6TRJ244
+                              </td>
+                              <td>
+                                <span class="info-box-icon"><i class="fa fa-check-circle" style="color:green"></i></span>
+                                Ativo
+                              </td>
+                              <td>
+                                Pickup Truck
+                              </td>
+                              <td>
+                                Cliente
+                              </td>
+                              <td>
+                                0
+                              </td>
+                              <td>
+                                08/05/2020
+                              </td>
+                              <td>
+                                56491
+                              </td>
+                              <td>
+                                Motorista 1
+                              </td>
+                              <td>
+                                2016
+                              </td>
+                              <td>
+                                Ford
+                              </td>
+                              <td>
+                                F-150
+                              </td>
+                              <td>
+                                Gasolina
+                              </td>
+                            </tr>
+                            <tr>                                  
+                              <td>Toyota Prius</td>
+                              <td>
+                                1FTFW1EG3GFA3I822
+                              </td>
+                              <td>
+                                1CA7895
+                              </td>
+                              <td>
+                                <span class="info-box-icon"><i class="fa fa-check-circle" style="color:green"></i></span>
+                                Ativo
+                              </td>
+                              <td>
+                                Car
+                              </td>
+                              <td>
+                                Diretoria
+                              </td>
+                              <td>
+                                14852
+                              </td>
+                              <td>
+                                08/05/2021
+                              </td>
+                              <td>
+                                85457
+                              </td>
+                              <td>
+                                Diretor 1
+                              </td>
+                              <td>
+                                2018
+                              </td>
+                              <td>
+                                Toyota
+                              </td>
+                              <td>
+                                Prius
+                              </td>
+                              <td>
+                                Gasolina
+                              </td>
+                            </tr>
+                            <tr>                                  
+                              <td>Ford F-150 / NFA-3121</td>
+                              <td>
+                                JTDKBRFU9J30593O7
+                              </td>
+                              <td>
+                                6TRJ244
+                              </td>
+                              <td>
+                                <span class="info-box-icon"><i class="fa fa-check-circle" style="color:green"></i></span>
+                                Ativo
+                              </td>
+                              <td>
+                                Pickup Truck
+                              </td>
+                              <td>
+                                Cliente
+                              </td>
+                              <td>
+                                0
+                              </td>
+                              <td>
+                                08/05/2020
+                              </td>
+                              <td>
+                                56491
+                              </td>
+                              <td>
+                                Motorista 1
+                              </td>
+                              <td>
+                                2016
+                              </td>
+                              <td>
+                                Ford
+                              </td>
+                              <td>
+                                F-150
+                              </td>
+                              <td>
+                                Gasolina
+                              </td>
+                            </tr>
+                            <tr>                                  
+                              <td>Toyota Prius</td>
+                              <td>
+                                1FTFW1EG3GFA3I822
+                              </td>
+                              <td>
+                                1CA7895
+                              </td>
+                              <td>
+                                <span class="info-box-icon"><i class="fa fa-check-circle" style="color:green"></i></span>
+                                Ativo
+                              </td>
+                              <td>
+                                Car
+                              </td>
+                              <td>
+                                Diretoria
+                              </td>
+                              <td>
+                                14852
+                              </td>
+                              <td>
+                                08/05/2021
+                              </td>
+                              <td>
+                                85457
+                              </td>
+                              <td>
+                                Diretor 1
+                              </td>
+                              <td>
+                                2018
+                              </td>
+                              <td>
+                                Toyota
+                              </td>
+                              <td>
+                                Prius
+                              </td>
+                              <td>
+                                Gasolina
+                              </td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- /.content -->
+      </div>
+      <!-- /.content-wrapper -->
+    
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+      </aside>
+      <!-- /.control-sidebar -->
+
+<footer class="main-footer">
+    <strong>Copyright &copy; 2022 <a href="https://www.frtisolucoes.com.br">FRTI Soluções</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 1.0
+    </div>
+  </footer>
+
+</div>
+
+
+
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src="../../Admin/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../../Admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE -->
+<script src="../../Admin/dist/js/adminlte.js"></script>
+
+<!-- FLOT CHARTS -->
+<script src="../../Admin/plugins/flot/jquery.flot.js"></script>
+<!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+<script src="../../Admin/plugins/flot/plugins/jquery.flot.resize.js"></script>
+<!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+<script src="../../Admin/plugins/flot/plugins/jquery.flot.pie.js"></script>
+
+
+<!-- OPTIONAL SCRIPTS -->
+<script src="../../Admin/plugins/chart.js/Chart.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../Admin/dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="../../Admin/dist/js/pages/dashboard3.js"></script>
+<script>
+    
+</script>
+</body>
+<html>
